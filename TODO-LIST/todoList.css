@@ -1,0 +1,83 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #FBF3D5;
+    color: #545c5a;
+}
+
+.container{
+    /* background-color: green; */
+    width: 500px;
+    height: 500px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+
+.inputSection{
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+
+.inputSection:hover {
+    transform: scale(1.05);
+}
+
+.todoInput{
+    flex:1;
+    border: 1px solid #EFBC9B;
+    border-radius: 50px 0 0 50px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.inputSection button{
+    width: 100px;
+    border: 1px solid #EFBC9B;
+    border-radius: 0 50px 50px 0;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #EFBC9B;
+    cursor: pointer;
+    color: #545c5a;
+    font-weight: bold;
+}
+
+.crossOver{
+    text-decoration: line-through;
+}
+
+ul{
+    width: 100%;
+    padding: 0 30px;
+}
+
+li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 25px;
+    margin-bottom: 20px;
+    border-style: none none solid none;
+    list-style-type: none;
+    color: #545c5a;
+}
+
+li span, li div {
+    cursor: pointer;
+}
+
+li button {
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+}
+
+li:hover {
+    transform: scale(1.05);
+}

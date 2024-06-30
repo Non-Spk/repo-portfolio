@@ -1,0 +1,7 @@
+.Back{
+  filter: invert(100%);
+}
+
+.Back img{
+    filter: invert(100%); 
+}
