@@ -2,6 +2,7 @@ import { Box, Image, Center, VStack, Heading, Text } from "@chakra-ui/react";
 import { CloseIcon } from "@chakra-ui/icons";
 import { useDeckStore } from "../../stores/CardDeckStore";
 import useFavoriteCard from "../FavoriteCard/FavoriteCard.hook";
+import { Link } from "react-router-dom";
 
 const FavoriteCard = () => {
   const { Deck } = useDeckStore();
@@ -23,9 +24,16 @@ const FavoriteCard = () => {
             const name = item.name;
             return (
               <Box position="relative">
-                <Center>
-                  <Image src={ImageURL} alt={name} w="50%" borderRadius="2xl" />
-                </Center>
+                <Link to={`/CardDetail/${name}`}>
+                  <Center>
+                    <Image
+                      src={ImageURL}
+                      alt={name}
+                      w="40%"
+                      borderRadius="2xl"
+                    />
+                  </Center>
+                </Link>
                 <CloseIcon
                   onClick={handdleClick(index)}
                   cursor="pointer"

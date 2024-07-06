@@ -44,59 +44,44 @@ function CardDetail() {
   };
 
   return (
-    <Box w="90%" maxW="1500px" margin="auto">
-      <Box px={4} m={10}>
-        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-          <Link to={`/`}>
-            <Button colorScheme="teal" variant="solid" size="lg" fontSize="4xl">
-              HOME
-            </Button>
-          </Link>
-          <HStack spacing={8} alignItems={"center"}>
-            <Button
-              onClick={handdleClick}
-              colorScheme="teal"
-              variant="solid"
-              size="lg"
-              fontSize="4xl"
-            >
-              ADD FAVORITE
-            </Button>
-          </HStack>
-        </Flex>
-      </Box>
+    <Box maxW="1500px" mx="auto" my={10} px={4}>
+      <Flex justify="space-between" align="center" mb={4}>
+        <Link to={`/`}>
+          <Button colorScheme="teal" variant="solid" size="lg" fontSize="xl">
+            HOME
+          </Button>
+        </Link>
+        <HStack spacing={4}>
+          <Button
+            onClick={handdleClick}
+            colorScheme="teal"
+            variant="solid"
+            size="lg"
+            fontSize="xl"
+          >
+            ADD FAVORITE
+          </Button>
+        </HStack>
+      </Flex>
       <Grid
-        h="1vh"
-        templateRows="repeat(8,1fr)"
-        templateColumns="repeat(4,1fr)"
-        columnGap={20}
-        rowGap={10}
+        templateColumns="repeat(4, 1fr)"
+        gap={6}
+        alignItems="center"
+        justifyItems="center"
       >
-        <GridItem rowSpan={7} colSpan={2}>
-          <Image src={data.ImageURL} alt={`image-${data.name}`} mb={10} />
+        <GridItem colSpan={2}>
+          <Image src={data.ImageURL} alt={`image-${data.name}`} />
         </GridItem>
-        <GridItem rowSpan={1} colSpan={2}>
-          <Heading as="h1" size="4xl">
-            <Text>{data.name}</Text>
+        <GridItem colSpan={2} gap={5}>
+          <Heading as="h1" size="xl" mb={2}>
+            {data.name}
           </Heading>
-        </GridItem>
-        <GridItem rowSpan={1} colSpan={2}>
-          <Text fontSize="4xl">{`Attribute : ${data.attribute}`}</Text>
-        </GridItem>
-        <GridItem rowSpan={1} colSpan={2}>
-          <Text fontSize="4xl">{`Level : ${data.level}`}</Text>
-        </GridItem>
-        <GridItem rowSpan={1} colSpan={2}>
-          <Text fontSize="4xl">{`Type : ${data.type}`}</Text>
-        </GridItem>
-        <GridItem rowSpan={1} colSpan={2}>
-          <Text fontSize="4xl">{data.desc}</Text>
-        </GridItem>
-        <GridItem rowSpan={1} colSpan={1}>
-          <Text fontSize="4xl">{`ATK : ${data.atk}`}</Text>
-        </GridItem>
-        <GridItem rowSpan={1} colSpan={1}>
-          <Text fontSize="4xl">{`DEF : ${data.def}`}</Text>
+          <Text fontSize="xl">{`Attribute: ${data.attribute}`}</Text>
+          <Text fontSize="xl">{`Level: ${data.level}`}</Text>
+          <Text fontSize="xl">{`Type: ${data.type}`}</Text>
+          <Text fontSize="xl">{data.desc}</Text>
+          <Text fontSize="xl">{`ATK: ${data.atk}`}</Text>
+          <Text fontSize="xl">{`DEF: ${data.def}`}</Text>
         </GridItem>
       </Grid>
     </Box>

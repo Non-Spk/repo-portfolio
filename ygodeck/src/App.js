@@ -23,7 +23,7 @@ function App() {
         bg="primary.400"
         w="100%"
         minH="100vh"
-        maxH="100%"
+        h="auto"
         p={4}
         color="primary.100"
       >
